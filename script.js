@@ -6,27 +6,26 @@ async function timer(startDate) {
     const start = new Date(startDate.replace(/-/g, '/'));
 
     while (true) {
-        let now = new Date();
-        let totalSeconds = Math.floor((now - start) / 1000);
-        let minutos = Math.floor((totalSeconds / 60), 0);
-        let horas = Math.floor((totalSeconds / 3600), 0);
-        let dias = Math.floor((horas / 24), 0);
-        let semanas = Math.floor((dias / 7), 0);
-        let meses = Math.floor((dias / 30), 0);
-        let anos = Math.floor((dias / 365), 0);
+        const now = new Date();
+        const diff = new Date(now - start);
 
+        const anos = diff.getUTCFullYear() - 1970; // 1970 é a base do Unix time
+        const meses = diff.getUTCMonth();
+        const dias = diff.getUTCDate() - 1; // O dia é 1-indexado
+        const horas = diff.getUTCHours();
+        const minutos = diff.getUTCMinutes();
+        const segundos = diff.getUTCSeconds();
 
-        //Exibe o timer (TROCA PRO SEU METODO)
-
-        document.getElementById('anos').innerHTML =  anos;
+        document.getElementById('anos').innerHTML = anos;
         document.getElementById('meses').innerHTML = meses;
-        document.getElementById('semanas').innerHTML = semanas;
         document.getElementById('dias').innerHTML = dias;
         document.getElementById('horas').innerHTML = horas;
         document.getElementById('minutos').innerHTML = minutos;
+        document.getElementById('segundos').innerHTML = segundos;
 
         await timeout(1000);
     }
 }
-//Rodando a função com a data de inicio.
+
+// Rodando a função com a data de inicio.
 timer("2024-02-13 14:56:30");
