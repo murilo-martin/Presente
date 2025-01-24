@@ -1,0 +1,120 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+.flex-carrosel{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.carrosel{
+
+    width: 20em;
+    height: 20em;
+    margin-top: 6em;
+
+}
+.title{
+
+    background-color: #282d33;
+    width: 100%;
+    height: 3em;
+    border-radius: 0 0 1.2em 1.2em;
+    border-bottom: .2em solid black;
+    border-right: .2em solid black;
+    border-left: .2em solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: whitesmoke;
+
+}
+.grid-data{
+
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    border-radius: .4em;
+    background-color: #000;
+    margin-top: 1.5em;
+    padding: .5em;
+
+}
+.data{
+
+    height: 80%;
+    width: 55%;
+    border-radius: 1.2em;
+    background-color: #282d33;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+    padding: 2em;
+}
+.data p{
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    
+}
+.title2{
+
+    color: whitesmoke;
+    margin-top: 1.5em;
+    font-size: 1.2em;
+
+}
+.fundoText{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 2em;
+    background-color: #000;
+    width: 20em;
+    height: fit-content;
+    border-radius: 1.2em;
+    padding-bottom: 1.2em;
+
+}
+.titleText{
+
+    color: whitesmoke;
+    padding-top: 2em;
+
+}
+.text{
+
+    padding: 1.2em;
+    text-align: justify;
+    font-weight: bold;
+    width: 90%;
+    height: 90%;
+    border-radius: .7em;
+    background-color: #282d33;
+    color: whitesmoke;
+
+}
+img{
+
+    width: 30em;
+    height: 30em;
+    border: .2em solid black;
+}
